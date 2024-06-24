@@ -1,0 +1,32 @@
+<div class="container">
+  @for (item of libros; track $index) {
+    <div class="card my-2">
+      <div class="card-header">
+        {{item.titulo}}
+      </div>
+      <div class="card-body">
+
+        <div>
+          <h5 class="card-title">Genero</h5>
+        <p class="card-text">  {{item.genero}}</p>
+        </div>
+
+
+        <div>
+          <h5 class="card-title">Publicación</h5>
+        <p class="card-text">  {{item.publicacion}}</p>
+        </div>
+
+
+        <div>
+          <h5 class="card-title">Resumen</h5>
+        <p class="card-text">  {{item.resumen}}</p>
+        </div>
+
+
+        <button class="btn btn-danger" (click)="eliminarLibro(item.id)">Eliminar</button>
+      </div>
+    </div>
+
+  }
+</div>
